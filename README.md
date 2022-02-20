@@ -30,5 +30,5 @@ docker build -t todo-web .
 
 ### Run Docker Container
 ```
-docker run -ti --rm -p 8080:80 --name todo-web -e VUE_APP_API_BASE_URL=http://localhost:7001/ todo-web
+docker run -ti --rm -p 8080:80 --name todo-web -e VUE_APP_API_BASE_URL=http://localhost:7001/api/v1/todo/ todo-web
 ```
