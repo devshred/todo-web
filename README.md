@@ -1,23 +1,14 @@
-# todo-web
+# Vue-based Frontend for a Todo-API
+This application is used for sample deployments in the scope of an [OKD](https://www.okd.io) workshop.
 
-## Project setup
+## initial setup
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+npm run serve -- --port 8000
 ```
 
 ### Customize configuration
@@ -30,5 +21,5 @@ docker build -t todo-web .
 
 ### Run Docker Container
 ```
-docker run -ti --rm -p 8080:80 --name todo-web -e VUE_APP_API_BASE_URL=http://localhost:7001/api/v1/todo/ todo-web
+docker run -ti --rm -p 8000:80 --name todo-web -e VUE_APP_API_BASE_URL=http://localhost:8080/api/v1/todo/ todo-web
 ```
