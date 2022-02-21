@@ -66,6 +66,7 @@ export default {
 </script>
 
 <template>
+  <h1>Todo App</h1>
   <div class="container">
     <div style="flex: 1">
       <div class="input__div">
@@ -129,6 +130,9 @@ body {
   font-size: 16px;
   margin: 0;
 }
+h1 {
+  text-align:center;
+}
 #app {
   max-width: 510px;
   margin: 50px auto;
@@ -153,7 +157,7 @@ footer {
   padding: 8px 0;
 }
 .todo-list .list:hover {
-  background: ##68a8e3;
+  background: #68a8e3;
 }
 .todo-list .list {
   display: flex;
