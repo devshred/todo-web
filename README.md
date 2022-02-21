@@ -1,9 +1,16 @@
-# Vue-based Frontend for a Todo-API
-This application is used for sample deployments in the scope of an [OKD](https://www.okd.io) workshop.
+# Vue-based Frontend for a todo app
+This application is used for sample deployments in the scope of an [OKD](https://www.okd.io/) workshop.
 
-## Running prepared image
+## Run API server
+To run the backend server do one of the following:
+* Implement a server based on [OpenAPI spec](https://raw.githubusercontent.com/devshred/todo-api-spring-kotlin/main/src/main/resources/todo-spec.yaml)
+* run [sample app based on Spring/Kotlin](https://github.com/devshred/todo-api-spring-kotlin)
+* run [sample app based on Quarkus](https://github.com/devshred/todo-api-quarkus)
+
+## Run Frontend
+### Running prepared image
 ```
-docker run --rm -p 8000:80 --name todo-web -e VUE_APP_API_BASE_URL=https://localhost:8080/api/v1/todo/ quay.io/johschmidtcc/todo-web
+docker run --rm -p 8000:80 --name todo-web -e VUE_APP_API_BASE_URL=<path-to-api-server>/api/v1/todo/ quay.io/johschmidtcc/todo-web
 ```
 
 ## Build and run locally
