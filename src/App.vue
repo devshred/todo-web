@@ -133,6 +133,9 @@ body {
 h1 {
   text-align:center;
 }
+span.text {
+  color: antiquewhite;
+}
 #app {
   max-width: 510px;
   margin: 50px auto;
