@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-web
+  labels:
+    app: todo-web
+spec:
+  selector:
+    matchLabels:
+      app: todo-web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: todo-web
+    spec:
+      volumes:
+      - name: html-cache
+        emptyDir: {}
+      containers:
+        - name: main
+          image: quay.io/johschmidtcc/todo-web:latest
+          imagePullPolicy: Always
+          volumes:
+          - name: html-cache
+            mountPath: /usr/share/nginx/html
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
