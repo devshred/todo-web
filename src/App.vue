@@ -5,7 +5,7 @@ export default {
     return {
       newTodo: "",
       hideCompleted: false,
-      todoData: null,
+      todoData: null
     };
   },
   computed: {
@@ -81,7 +81,7 @@ export default {
         <div class="border"></div>
       </div>
 
-      <p v-if="!todoData">Loading data from {{ baseURL }}...</p>
+      <p v-if="!todoData">Loading data ...</p>
       <div class="todo-list" v-else>
         <div v-if="filteredTodos.length==0" class="text">empty list</div>
         <div v-else>
